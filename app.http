@@ -1,0 +1,76 @@
+
+//api1============================================
+
+get http://localhost:3000/todos/
+
+//s1==========
+###
+
+get http://localhost:3000/todos/?status=TO%20DO
+
+//s2==========
+###
+
+get http://localhost:3000/todos/?priority=HIGH
+
+//s3==========
+###
+
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+//s4==========
+###
+
+get http://localhost:3000/todos/?search_q=watch
+
+
+
+//api2============================================
+
+###
+get http://localhost:3000/todos/1
+
+
+//api3============================================
+###
+post http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+//api4============================================
+###
+
+//s1==========
+###
+
+put http://localhost:3000/todos/1
+Content-Type: application/json
+
+{ "status": "DONE" }
+
+//s2==========
+###
+
+put http://localhost:3000/todos/1
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+
+//s3==========
+###
+
+put http://localhost:3000/todos/1
+Content-Type: application/json
+
+{ "todo": "Some task" }
+
+//api5============================================
+###
+delete http://localhost:3000/todos/1
+
