@@ -1,28 +1,34 @@
 
 //api1============================================
 
-get http://localhost:3000/todos/
+get http://localhost:3001/todos/
 
 //s1==========
 ###
 
-get http://localhost:3000/todos/?status=TO%20DO
+get http://localhost:3001/todos/?status=TO%20DO
 
 //s2==========
 ###
 
-get http://localhost:3000/todos/?priority=HIGH
+get http://localhost:3001/todos/?priority=HIGH
 
 //s3==========
 ###
 
-get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+get http://localhost:3001/todos/?priority=HIGH&status=IN%20PROGRESS
 
 
 //s4==========
 ###
 
 get http://localhost:3000/todos/?search_q=watch
+
+####
+
+
+get http://localhost:3001/agenda/?date=2021-02-22
+
 
 
 
@@ -34,14 +40,16 @@ get http://localhost:3000/todos/1
 
 //api3============================================
 ###
-post http://localhost:3000/todos
+post http://localhost:3001/todos/
 Content-Type: application/json
 
 {
-  "id": 10,
-  "todo": "Finalize event theme",
-  "priority": "LOW",
-  "status": "TO DO"
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
 }
 //api4============================================
 ###
@@ -49,7 +57,7 @@ Content-Type: application/json
 //s1==========
 ###
 
-put http://localhost:3000/todos/1
+put http://localhost:3001/todos/1
 Content-Type: application/json
 
 { "status": "DONE" }
@@ -72,5 +80,4 @@ Content-Type: application/json
 
 //api5============================================
 ###
-delete http://localhost:3000/todos/1
-
+delete http://localhost:3001/todos/6
