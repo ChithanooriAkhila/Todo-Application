@@ -11,7 +11,7 @@ get http://localhost:3001/todos/?status=TO%20DO
 //s2==========
 ###
 
-get http://localhost:3001/todos/?priority=HIGH
+get http://localhost:3001/todos/?priority=LOW
 
 //s3==========
 ###
@@ -57,7 +57,7 @@ Content-Type: application/json
 //s1==========
 ###
 
-put http://localhost:3001/todos/1
+put http://localhost:3001/todos/2
 Content-Type: application/json
 
 { "status": "DONE" }
@@ -81,3 +81,4 @@ Content-Type: application/json
 //api5============================================
 ###
 delete http://localhost:3001/todos/6
+
