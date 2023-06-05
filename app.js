@@ -244,7 +244,7 @@ app.post("/todos/", async (request, response) => {
   let formattedDate;
 
   try {
-    formattedDate = format(new Date(date), "yyyy-MM-dd");
+    formattedDate = format(new Date(dueDate), "yyyy-MM-dd");
   } catch (e) {
     response.status(400);
     response.send("Invalid Due Date");
@@ -321,7 +321,7 @@ app.put("/todos/:todoId/", async (request, response) => {
     priority = previousTodo.priority,
     status = previousTodo.status,
     category = previousTodo.category,
-    dueDate = previousTodo.dueDate,
+    dueDate = previousTodo.due_date,
   } = request.body;
 
   const updateTodoQuery = `
